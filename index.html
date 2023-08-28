@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +19,8 @@
       color: #fff;
       text-align: center;
       padding: 0.5rem;
+      padding-top: 1rem;
+      padding-bottom: 0rem;
     }
 
     nav {
@@ -25,6 +28,7 @@
       justify-content: center;
       background-color: #222;
       padding: 0.5rem;
+      font-size:large;
     }
 
     nav a {
@@ -40,7 +44,7 @@
       bottom: 0;
       left: 50%;
       width: 0;
-      height: 2px;
+      height: 1.5px;
       background-color: #fff;
       transform: translateX(-50%);
       transition: width 0.3s ease-in-out;
@@ -51,22 +55,107 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 32rem;
+      padding: 2rem;
+      margin-top: 50px;
     }
 
+    /* Image Gallery */
+    .image-gallery {
+      position: relative;
+      width: 100%;
+      height: 500px; /* Adjust as needed */
+      overflow: hidden;
+    }
+
+    .image-gallery img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+
+    .image-gallery img.active {
+      opacity: 1;
+    }
+
+    .image-gallery p {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 0.5rem;
+      border-radius: 50px;
+    }
+
+    /* Mission Section */
+    .mission-section {
+      background-color: #222;
+      border-radius: 10px;
+      padding: 3rem;
+      padding-right: 3rem;
+      color: white;
+      font-size:larger;
+      margin-top: 50px;
+    }
+
+    .mission-section h2 {
+      margin-top: 0;
+    }
+
+    .mission-button, .box-button {
+      display: inline-block;
+      background-color:#fff;
+      border: 2px solid white;
+      border-radius: 50px;
+      padding: 0.5rem 1rem;
+      color: #222;
+      text-decoration: none;
+      transition: background-color 0.3s ease-in-out;
+      font-weight: 600;
+    }
+
+    .mission-button:hover, .box-button:hover {
+      background-color: #222;
+      color: white;
+    }
+
+    /* Box Container Section */
+    .box-container {
+      display: flex;
+      justify-content: space-between;
+      color:white;
+      padding: 1rem 0;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .box {
+      flex: 1;
+      border: 2px solid white;
+      padding: 1rem;
+      margin: 0 0.5rem;
+      text-align: center;
+      border-radius: 10px;
+      background-color: #222;
+    }
     footer {
       text-align: center;
       padding: 1rem;
       background-color: #222;
       color: #fff;
     }
+
   </style>
 </head>
 <body>
   <header>
-    <h1>Hume Nanotechnology</h1>
+    <img src="logo.png" alt="Hume Nanotechnology" height = '53' width = '175'>
   </header>
 
   <nav>
@@ -75,14 +164,77 @@
     <a href="Research.html">Research</a>
     <a href="About.html">About</a>
   </nav>
-  
 
   <div class="container">
-    
+
+    <!-- Moving Image Gallery -->
+    <div class="image-gallery">
+      <img src="image1.gif" alt="Image 1" class="active">
+      <img src="image2.jpg" alt="Image 2">
+      <img src="image3.jpg" alt="Image 3">
+    </div>
+
+    <!-- Mission Section -->
+    <div class="mission-section">
+      <div style="display: flex; align-items: center;">
+        <div style="flex: 1;">
+            <h1>Our Mission</h1>
+            <p>The modern world is propped up by computer chips, which are produced through 2-dimensional, static nanofabrication technology that costs billions to research and hundreds of millions to buy. Learn how we plan to change that.</p>
+            <a href="roadmap.html" class="mission-button">Roadmap</a>
+        </div>
+        <div>
+            <img src='mission1.jpg' height='200' width='300' style="margin-left: 20px;">
+        </div>
+    </div>
+    </div>
+
+    <div class="container">
+      <h1>Why Nanotechnology?</h1>
+        <p>We believe creating fundamentally powerful, precisely controlled technology is, in most cases, better than the alternative. We believe subnanotechnology and its offshoots are, in conjunction with modern advances in AI, twin revolutions that will profoundly improve civilization if done correctly. Hume was formed, first and foremost, to do social good.</p>
+    </div>
+
+    <!-- Box Container Section -->
+    <div class="box-container">
+      <div class="box">
+        <h3>ASML and Foundries</h3>
+        <p>Learn how computer chips are made.</p>
+        <a href="https://www.asml.com/en/technology/all-about-microchips/how-microchips-are-made" class="box-button">Picometer++</a>
+      </div>
+      <div class="box">
+        <h3>Active Development</h3>
+        <p>Look at what we're actively researching right now, and tune in to our future developments.</p>
+        <a href="research.html" class="box-button">Research</a>
+      </div>
+      <div class="box">
+        <h3>Future Roadmap</h3>
+        <p>Take a look at some of the discoveries that made nanotechnology.</p>
+        <a href="roadmap.html" class="box-button">Roadmap</a>
+      </div>
+      <div class="box">
+        <h3>About Our Company</h3>
+        <p>Learn about our company, founder, and how to get into contact with us.</p>
+        <a href="about.html" class="box-button">About</a>
+      </div>
+    </div>
+
   </div>
 
   <footer>
-    <p>&copy; 2023 Hume Nanotechnology.</p>
+    <p>&copy; 2023 Hume Nanotechnology</p>
   </footer>
+
+  <script>
+    // Simple Image Carousel
+    const images = document.querySelectorAll('.image-gallery img');
+    let currentIndex = 0;
+
+    function switchImage() {
+      images[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add('active');
+    }
+
+    setInterval(switchImage, 5000);  // Change every 5 seconds
+  </script>
 </body>
 </html>
