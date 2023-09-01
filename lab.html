@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,7 +95,6 @@
     /* Mission Section */
     .mission-section {
       background-color: #222;
-      border-radius: 10px;
       padding: 3rem;
       padding-right: 3rem;
       color: white;
@@ -150,7 +148,6 @@
       background-color: #222;
       color: #fff;
     }
-
   </style>
 </head>
 <body>
@@ -164,74 +161,49 @@
     <a href="research.html">Research</a>
     <a href="about.html">About</a>
   </nav>
+  
 
   <div class="container">
+    <h1>PROMETHEUS LAB</h1>
+    <p>Our bleeding-edge research division. Here's some of the equipment we've got:</p>
+  </div>
 
-    <!-- Moving Image Gallery -->
-    <div class="image-gallery">
-      <img src="image1.gif" alt="Image 1" class="active">
-      <img src="image2.jpg" alt="Image 2">
-      <img src="image3.jpg" alt="Image 3">
-    </div>
+  <div class="mission-section">
+    <div style="display: flex; align-items: center;">
+      <div style="flex: 1;">
+        <h4>Macroscale</h4>
+        <p>• Lathe</p>
+        <p>• 3-Axis Milling Machine</p>
+        <p>• Metal Grinding Machine</p>
+        <p>• FDM 3d Printer</p>
+        <p>• Cryogenic Liquid Storage</p>
+        <p>• Chemical/Organic Synthesis Station</p>
+        <p>• Oxymethane Furnace</p>
 
-    <!-- Mission Section -->
-    <div class="mission-section">
-      <div style="display: flex; align-items: center;">
-        <div style="flex: 1;">
-            <h1>Our Mission</h1>
-            <p>The modern world is propped up by computer chips, which are produced through 2-dimensional, static nanofabrication technology that costs billions to research and hundreds of millions to buy. Learn how we plan to change that.</p>
-            <a href="lab.html" class="mission-button">Lab</a>
-        </div>
-    </div>
-    </div>
+        <h4>Mesoscale</h4>
+        <p>• Optical Microscope</p>
+        <p>• Wire Bonder for MEMS</p>
+        <p>• Microscale Breadboards</p>
+        <p>• 2x 99.97 HEPA Purification Systems</p>
+        <p>• Microoptics Station</p>
 
-    <div class="container">
-      <h1>Why Nanotechnology?</h1>
-        <p>We believe creating fundamentally powerful, precisely controlled technology is, in most cases, better than the alternative. We believe subnanotechnology and its offshoots are, in conjunction with modern advances in AI, twin revolutions that will profoundly improve civilization if done correctly. Hume was formed, first and foremost, to do social good.</p>
-    </div>
+        <h4>Nanoscale</h4>
+        <p>• Maskless Lithography sub-1µm</p>
 
-    <!-- Box Container Section -->
-    <div class="box-container">
-      <div class="box">
-        <h3>ASML and Foundries</h3>
-        <p>Learn how computer chips are made.</p>
-        <a href="https://www.asml.com/en/technology/all-about-microchips/how-microchips-are-made" class="box-button">Picometer++</a>
-      </div>
-      <div class="box">
-        <h3>Active Development</h3>
-        <p>Look at what we're actively researching right now, and tune in to our future developments.</p>
-        <a href="research.html" class="box-button">Research</a>
-      </div>
-      <div class="box">
-        <h3>Future Roadmap</h3>
-        <p>Take a look at some of the discoveries that made nanotechnology.</p>
-        <a href="roadmap.html" class="box-button">Roadmap</a>
-      </div>
-      <div class="box">
-        <h3>About Our Company</h3>
-        <p>Learn about our company, founder, and how to get into contact with us.</p>
-        <a href="about.html" class="box-button">About</a>
+        
+
+
+          
       </div>
     </div>
+  </div>
+  <div class="container">
 
   </div>
+  
 
   <footer>
     <p>&copy; 2023 Hume Nanotechnology</p>
   </footer>
-
-  <script>
-    // Simple Image Carousel
-    const images = document.querySelectorAll('.image-gallery img');
-    let currentIndex = 0;
-
-    function switchImage() {
-      images[currentIndex].classList.remove('active');
-      currentIndex = (currentIndex + 1) % images.length;
-      images[currentIndex].classList.add('active');
-    }
-
-    setInterval(switchImage, 5000);  // Change every 5 seconds
-  </script>
 </body>
 </html>
