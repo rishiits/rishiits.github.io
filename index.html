@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hume Nanotechnology</title>
+  <title>Hume</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -23,12 +22,20 @@
       padding-bottom: 0rem;
     }
 
+    header img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      height: 53px;
+      width: 175px;
+    }
+
     nav {
       display: flex;
       justify-content: center;
       background-color: #222;
       padding: 0.5rem;
-      font-size:large;
+      font-size: large;
     }
 
     nav a {
@@ -63,17 +70,17 @@
 
     /* Image Gallery */
     .image-gallery {
-      position: relative;
-      width: 100%;
-      height: 500px; /* Adjust as needed */
+      display: flex;
+      justify-content: center;
+      align-items: center;
       overflow: hidden;
+      height: 400px; /* Keep the height the same */
     }
 
     .image-gallery img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      width: 50%; /* Adjust the width */
+      height: 100%; /* Make the height fill the parent */
+      object-fit: cover; /* This will maintain aspect ratio */
       opacity: 0;
       transition: opacity 1s;
     }
@@ -96,11 +103,10 @@
     /* Mission Section */
     .mission-section {
       background-color: #222;
-      border-radius: 10px;
-      padding: 3rem;
-      padding-right: 3rem;
       color: white;
-      font-size:larger;
+      padding: 3rem;
+      border-radius: 10px;
+      font-size: larger;
       margin-top: 50px;
     }
 
@@ -109,8 +115,7 @@
     }
 
     .mission-button, .box-button {
-      display: inline-block;
-      background-color:#fff;
+      background-color: #fff;
       border: 2px solid white;
       border-radius: 50px;
       padding: 0.5rem 1rem;
@@ -129,9 +134,7 @@
     .box-container {
       display: flex;
       justify-content: space-between;
-      color:white;
       padding: 1rem 0;
-      border-radius: 10px;
       margin-bottom: 2rem;
     }
 
@@ -143,7 +146,9 @@
       text-align: center;
       border-radius: 10px;
       background-color: #222;
+      color: white;
     }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -155,7 +160,7 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Hume Nanotechnology" height = '53' width = '175'>
+    <img src="logo.png" alt="Hume Nanotechnology">
   </header>
 
   <nav>
@@ -185,51 +190,52 @@
 
     <div class="container">
       <h1>Why Nanotechnology?</h1>
-        <p>We believe creating fundamentally powerful, precisely controlled technology is, in most cases, better than the alternative. We believe subnanotechnology and its offshoots are, in conjunction with modern advances in AI, twin revolutions that will profoundly improve civilization if done correctly. Hume was formed, first and foremost, to do social good.</p>
+        <p>Technology at the nanoscale and below are thing's we're willing to bet will be amongst the greatest revolutions in the century, and we're working rapidly and intelligently to shorten timelines by a significant factor. Classical nanoscale storage systems (DNA), molecular manufacturers (ribosomes) and modular nanorobots (cells) are the foundation of all intelligent life that, to our knowledge, has ever existed. We're actively working on methods far more powerful and compact than these. Due to the increasingly apparent onslaught of intelligence more capable than human intellect, a suitably versatile substrate is a must to fully realize its capabilities.</p>
     </div>
 
     <!-- Box Container Section -->
     <div class="box-container">
       <div class="box">
-        <h3>ASML and Foundries</h3>
-        <p>Learn how computer chips are made.</p>
-        <a href="https://www.asml.com/en/technology/all-about-microchips/how-microchips-are-made" class="box-button">EUV Lithography</a>
+        <h3>Modern Nanofabrication</h3>
+        <p>Take a look at some modern nanofabrication methods used by industry.</p>
+        <a href="https://www.asml.com/en/technology/all-about-microchips/how-microchips-are-made" class="box-button">Nanofabrication</a>
       </div>
       <div class="box">
-        <h3>Active Development</h3>
-        <p>Look at what we're actively researching right now, and tune in to our future developments.</p>
+        <h3>Research Partners</h3>
+        <p>Take a look at our research partners and affiliations, and explore adjacent projects or corporations.</p>
         <a href="research.html" class="box-button">Research</a>
       </div>
       <div class="box">
-        <h3>Prometheus</h3>
-        <p>Take a look at our cutting-edge fabrication facility.</p>
+        <h3>Prometheus Lab</h3>
+        <p>Learn more about our research accomplishments and focuses.</p>
         <a href="lab.html" class="box-button">Lab</a>
       </div>
       <div class="box">
-        <h3>About Our Company</h3>
-        <p>Learn about our company, founder, and how to get into contact with us.</p>
-        <a href="about.html" class="box-button">About</a>
+        <h3>Contact</h3>
+          <p>Contact us!</p>
+          <a href="about.html" class="box-button">About</a>
+        </div>
       </div>
+  
     </div>
-
-  </div>
-
-  <footer>
-    <p>&copy; 2023 Hume Nanotechnology</p>
-  </footer>
-
-  <script>
-    // Simple Image Carousel
-    const images = document.querySelectorAll('.image-gallery img');
-    let currentIndex = 0;
-
-    function switchImage() {
-      images[currentIndex].classList.remove('active');
-      currentIndex = (currentIndex + 1) % images.length;
-      images[currentIndex].classList.add('active');
-    }
-
-    setInterval(switchImage, 5000);  // Change every 5 seconds
-  </script>
-</body>
-</html>
+  
+    <footer>
+      <p>&copy; 2023 Hume Nanotechnology</p>
+    </footer>
+  
+    <script>
+      // Simple Image Carousel
+      const images = document.querySelectorAll('.image-gallery img');
+      let currentIndex = 0;
+  
+      function switchImage() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('active');
+      }
+  
+      setInterval(switchImage, 5000);  // Change every 5 seconds
+    </script>
+  </body>
+  </html>
+  
